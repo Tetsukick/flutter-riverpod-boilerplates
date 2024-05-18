@@ -23,6 +23,27 @@ This is a very simple Boilerplate application, this has following features.
   
 ## Getting Started 🚀
 
+### Initial setup step
+1. rename bundleId
+You can rename bundle id by using [rename](https://pub.dev/packages/rename) package
+
+```
+flutter pub run rename setBundleId --value {your bundle id}
+```
+
+2. set up firebase project
+You can set by using flutterfire CLI.
+
+```
+flutterfire configure
+```
+
+more detail info for how to set up firebase project.  
+please check from [here](https://firebase.flutter.dev/docs/cli)
+
+
+---
+
 You can go through this [Flutter Starter Pack](https://sadmansamee.github.io/flutter_starter_pack).
 
 This project contains 3 flavors:
