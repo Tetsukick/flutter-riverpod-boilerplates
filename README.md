@@ -31,15 +31,23 @@ You can rename bundle id by using [rename](https://pub.dev/packages/rename) pack
 flutter pub run rename setBundleId --value {your bundle id}
 ```
 
-2. set up firebase project
+2. Set up firebase project
 You can set by using flutterfire CLI.
 
 ```
 flutterfire configure
 ```
-
 more detail info for how to set up firebase project.  
 please check from [here](https://firebase.flutter.dev/docs/cli)
+
+3. Set up application icon
+    1. Please put your icon to 'assets/app_logo.png' by size 1024 x 1024
+    2. Generate app icon in each platform by bellow command
+       ```
+         flutter pub run flutter_launcher_icons
+       ```
+       You can check more detail info from [here](https://pub.dev/packages/flutter_launcher_icons)
+       
 
 
 ---
