@@ -12,7 +12,7 @@ part of 'token.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Token _$TokenFromJson(Map<String, dynamic> json) {
   return _Token.fromJson(json);
@@ -60,18 +60,21 @@ class _$TokenCopyWithImpl<$Res, $Val extends Token>
 }
 
 /// @nodoc
-abstract class _$$_TokenCopyWith<$Res> implements $TokenCopyWith<$Res> {
-  factory _$$_TokenCopyWith(_$_Token value, $Res Function(_$_Token) then) =
-      __$$_TokenCopyWithImpl<$Res>;
+abstract class _$$TokenImplCopyWith<$Res> implements $TokenCopyWith<$Res> {
+  factory _$$TokenImplCopyWith(
+          _$TokenImpl value, $Res Function(_$TokenImpl) then) =
+      __$$TokenImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String token});
 }
 
 /// @nodoc
-class __$$_TokenCopyWithImpl<$Res> extends _$TokenCopyWithImpl<$Res, _$_Token>
-    implements _$$_TokenCopyWith<$Res> {
-  __$$_TokenCopyWithImpl(_$_Token _value, $Res Function(_$_Token) _then)
+class __$$TokenImplCopyWithImpl<$Res>
+    extends _$TokenCopyWithImpl<$Res, _$TokenImpl>
+    implements _$$TokenImplCopyWith<$Res> {
+  __$$TokenImplCopyWithImpl(
+      _$TokenImpl _value, $Res Function(_$TokenImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -79,7 +82,7 @@ class __$$_TokenCopyWithImpl<$Res> extends _$TokenCopyWithImpl<$Res, _$_Token>
   $Res call({
     Object? token = null,
   }) {
-    return _then(_$_Token(
+    return _then(_$TokenImpl(
       token: null == token
           ? _value.token
           : token // ignore: cast_nullable_to_non_nullable
@@ -90,11 +93,11 @@ class __$$_TokenCopyWithImpl<$Res> extends _$TokenCopyWithImpl<$Res, _$_Token>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Token implements _Token {
-  const _$_Token({required this.token});
+class _$TokenImpl implements _Token {
+  const _$TokenImpl({required this.token});
 
-  factory _$_Token.fromJson(Map<String, dynamic> json) =>
-      _$$_TokenFromJson(json);
+  factory _$TokenImpl.fromJson(Map<String, dynamic> json) =>
+      _$$TokenImplFromJson(json);
 
   @override
   final String token;
@@ -105,10 +108,10 @@ class _$_Token implements _Token {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Token &&
+            other is _$TokenImpl &&
             (identical(other.token, token) || other.token == token));
   }
 
@@ -119,26 +122,26 @@ class _$_Token implements _Token {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_TokenCopyWith<_$_Token> get copyWith =>
-      __$$_TokenCopyWithImpl<_$_Token>(this, _$identity);
+  _$$TokenImplCopyWith<_$TokenImpl> get copyWith =>
+      __$$TokenImplCopyWithImpl<_$TokenImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TokenToJson(
+    return _$$TokenImplToJson(
       this,
     );
   }
 }
 
 abstract class _Token implements Token {
-  const factory _Token({required final String token}) = _$_Token;
+  const factory _Token({required final String token}) = _$TokenImpl;
 
-  factory _Token.fromJson(Map<String, dynamic> json) = _$_Token.fromJson;
+  factory _Token.fromJson(Map<String, dynamic> json) = _$TokenImpl.fromJson;
 
   @override
   String get token;
   @override
   @JsonKey(ignore: true)
-  _$$_TokenCopyWith<_$_Token> get copyWith =>
+  _$$TokenImplCopyWith<_$TokenImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

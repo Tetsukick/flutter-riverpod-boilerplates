@@ -12,7 +12,7 @@ part of 'book.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Book _$BookFromJson(Map<String, dynamic> json) {
   return _Book.fromJson(json);
@@ -89,9 +89,10 @@ class _$BookCopyWithImpl<$Res, $Val extends Book>
 }
 
 /// @nodoc
-abstract class _$$_BookCopyWith<$Res> implements $BookCopyWith<$Res> {
-  factory _$$_BookCopyWith(_$_Book value, $Res Function(_$_Book) then) =
-      __$$_BookCopyWithImpl<$Res>;
+abstract class _$$BookImplCopyWith<$Res> implements $BookCopyWith<$Res> {
+  factory _$$BookImplCopyWith(
+          _$BookImpl value, $Res Function(_$BookImpl) then) =
+      __$$BookImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -103,9 +104,10 @@ abstract class _$$_BookCopyWith<$Res> implements $BookCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_BookCopyWithImpl<$Res> extends _$BookCopyWithImpl<$Res, _$_Book>
-    implements _$$_BookCopyWith<$Res> {
-  __$$_BookCopyWithImpl(_$_Book _value, $Res Function(_$_Book) _then)
+class __$$BookImplCopyWithImpl<$Res>
+    extends _$BookCopyWithImpl<$Res, _$BookImpl>
+    implements _$$BookImplCopyWith<$Res> {
+  __$$BookImplCopyWithImpl(_$BookImpl _value, $Res Function(_$BookImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -117,7 +119,7 @@ class __$$_BookCopyWithImpl<$Res> extends _$BookCopyWithImpl<$Res, _$_Book>
     Object? description = freezed,
     Object? preview = freezed,
   }) {
-    return _then(_$_Book(
+    return _then(_$BookImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -144,8 +146,8 @@ class __$$_BookCopyWithImpl<$Res> extends _$BookCopyWithImpl<$Res, _$_Book>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Book extends _Book {
-  const _$_Book(
+class _$BookImpl extends _Book {
+  const _$BookImpl(
       {required this.id,
       this.title,
       this.subTitle,
@@ -153,7 +155,8 @@ class _$_Book extends _Book {
       this.preview})
       : super._();
 
-  factory _$_Book.fromJson(Map<String, dynamic> json) => _$$_BookFromJson(json);
+  factory _$BookImpl.fromJson(Map<String, dynamic> json) =>
+      _$$BookImplFromJson(json);
 
   @override
   final int id;
@@ -172,10 +175,10 @@ class _$_Book extends _Book {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Book &&
+            other is _$BookImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.title, title) || other.title == title) &&
             (identical(other.subTitle, subTitle) ||
@@ -193,12 +196,12 @@ class _$_Book extends _Book {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_BookCopyWith<_$_Book> get copyWith =>
-      __$$_BookCopyWithImpl<_$_Book>(this, _$identity);
+  _$$BookImplCopyWith<_$BookImpl> get copyWith =>
+      __$$BookImplCopyWithImpl<_$BookImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_BookToJson(
+    return _$$BookImplToJson(
       this,
     );
   }
@@ -210,10 +213,10 @@ abstract class _Book extends Book {
       final String? title,
       final String? subTitle,
       final String? description,
-      final String? preview}) = _$_Book;
+      final String? preview}) = _$BookImpl;
   const _Book._() : super._();
 
-  factory _Book.fromJson(Map<String, dynamic> json) = _$_Book.fromJson;
+  factory _Book.fromJson(Map<String, dynamic> json) = _$BookImpl.fromJson;
 
   @override
   int get id;
@@ -227,5 +230,6 @@ abstract class _Book extends Book {
   String? get preview;
   @override
   @JsonKey(ignore: true)
-  _$$_BookCopyWith<_$_Book> get copyWith => throw _privateConstructorUsedError;
+  _$$BookImplCopyWith<_$BookImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
