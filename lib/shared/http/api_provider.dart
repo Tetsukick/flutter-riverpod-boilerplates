@@ -87,14 +87,16 @@ class ApiProvider {
         'accept': '*/*',
         'Content-Type': content,
       };
-      final _appToken = await _tokenRepository.fetchToken();
-      if (_appToken != null) {
-        headers['Authorization'] = 'Bearer ${_appToken}';
-      }
+      final appToken = await _tokenRepository.fetchToken();
+      if (appToken != null && appToken.token != null) {
+        headers['Authorization'] = 'Bearer ${appToken.token}';
+      } else {}
       //Sometime for some specific endpoint it may require to use different Token
       if (token != null) {
         headers['Authorization'] = 'Bearer ${token}';
       }
+
+      debugPrint('headers for $path: $headers');
 
       final response = await _dio.post(
         url,
