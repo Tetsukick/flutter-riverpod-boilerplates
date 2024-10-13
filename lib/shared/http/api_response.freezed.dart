@@ -72,6 +72,9 @@ class _$APIResponseCopyWithImpl<T, $Res, $Val extends APIResponse<T>>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of APIResponse
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -91,6 +94,8 @@ class __$$APISuccessImplCopyWithImpl<T, $Res>
       _$APISuccessImpl<T> _value, $Res Function(_$APISuccessImpl<T>) _then)
       : super(_value, _then);
 
+  /// Create a copy of APIResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -130,7 +135,9 @@ class _$APISuccessImpl<T> implements APISuccess<T> {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(value));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of APIResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$APISuccessImplCopyWith<T, _$APISuccessImpl<T>> get copyWith =>
@@ -203,7 +210,10 @@ abstract class APISuccess<T> implements APIResponse<T> {
   const factory APISuccess(final T value) = _$APISuccessImpl<T>;
 
   T get value;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of APIResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$APISuccessImplCopyWith<T, _$APISuccessImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -227,6 +237,8 @@ class __$$APIErrorImplCopyWithImpl<T, $Res>
       _$APIErrorImpl<T> _value, $Res Function(_$APIErrorImpl<T>) _then)
       : super(_value, _then);
 
+  /// Create a copy of APIResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -240,6 +252,8 @@ class __$$APIErrorImplCopyWithImpl<T, $Res>
     ));
   }
 
+  /// Create a copy of APIResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AppExceptionCopyWith<$Res> get exception {
@@ -274,7 +288,9 @@ class _$APIErrorImpl<T> implements APIError<T> {
   @override
   int get hashCode => Object.hash(runtimeType, exception);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of APIResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$APIErrorImplCopyWith<T, _$APIErrorImpl<T>> get copyWith =>
@@ -347,7 +363,10 @@ abstract class APIError<T> implements APIResponse<T> {
   const factory APIError(final AppException exception) = _$APIErrorImpl<T>;
 
   AppException get exception;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of APIResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$APIErrorImplCopyWith<T, _$APIErrorImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }

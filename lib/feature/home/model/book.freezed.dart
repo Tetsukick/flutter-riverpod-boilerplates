@@ -26,8 +26,12 @@ mixin _$Book {
   String? get description => throw _privateConstructorUsedError;
   String? get preview => throw _privateConstructorUsedError;
 
+  /// Serializes this Book to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Book
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $BookCopyWith<Book> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -54,6 +58,8 @@ class _$BookCopyWithImpl<$Res, $Val extends Book>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Book
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -110,6 +116,8 @@ class __$$BookImplCopyWithImpl<$Res>
   __$$BookImplCopyWithImpl(_$BookImpl _value, $Res Function(_$BookImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Book
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -188,12 +196,14 @@ class _$BookImpl extends _Book {
             (identical(other.preview, preview) || other.preview == preview));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, id, title, subTitle, description, preview);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Book
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$BookImplCopyWith<_$BookImpl> get copyWith =>
@@ -228,8 +238,11 @@ abstract class _Book extends Book {
   String? get description;
   @override
   String? get preview;
+
+  /// Create a copy of Book
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$BookImplCopyWith<_$BookImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

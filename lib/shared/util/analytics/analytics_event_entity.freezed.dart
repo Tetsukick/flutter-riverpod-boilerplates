@@ -24,8 +24,12 @@ mixin _$AnalyticsEventEntity {
   AnalyticsEventAnalyticsEventDetail? get analyticsEventDetail =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this AnalyticsEventEntity to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AnalyticsEventEntity
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AnalyticsEventEntityCopyWith<AnalyticsEventEntity> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -53,6 +57,8 @@ class _$AnalyticsEventEntityCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AnalyticsEventEntity
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -71,6 +77,8 @@ class _$AnalyticsEventEntityCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of AnalyticsEventEntity
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AnalyticsEventAnalyticsEventDetailCopyWith<$Res>? get analyticsEventDetail {
@@ -108,6 +116,8 @@ class __$$AnalyticsEventEntityImplCopyWithImpl<$Res>
       $Res Function(_$AnalyticsEventEntityImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AnalyticsEventEntity
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -155,11 +165,13 @@ class _$AnalyticsEventEntityImpl implements _AnalyticsEventEntity {
                 other.analyticsEventDetail == analyticsEventDetail));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, name, analyticsEventDetail);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AnalyticsEventEntity
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AnalyticsEventEntityImplCopyWith<_$AnalyticsEventEntityImpl>
@@ -188,8 +200,11 @@ abstract class _AnalyticsEventEntity implements AnalyticsEventEntity {
   String? get name;
   @override
   AnalyticsEventAnalyticsEventDetail? get analyticsEventDetail;
+
+  /// Create a copy of AnalyticsEventEntity
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AnalyticsEventEntityImplCopyWith<_$AnalyticsEventEntityImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -205,8 +220,12 @@ mixin _$AnalyticsEventAnalyticsEventDetail {
   String? get screen => throw _privateConstructorUsedError;
   String? get item => throw _privateConstructorUsedError;
 
+  /// Serializes this AnalyticsEventAnalyticsEventDetail to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AnalyticsEventAnalyticsEventDetail
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AnalyticsEventAnalyticsEventDetailCopyWith<
           AnalyticsEventAnalyticsEventDetail>
       get copyWith => throw _privateConstructorUsedError;
@@ -234,6 +253,8 @@ class _$AnalyticsEventAnalyticsEventDetailCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AnalyticsEventAnalyticsEventDetail
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -280,6 +301,8 @@ class __$$AnalyticsEventAnalyticsEventDetailImplCopyWithImpl<$Res>
       $Res Function(_$AnalyticsEventAnalyticsEventDetailImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AnalyticsEventAnalyticsEventDetail
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -337,11 +360,13 @@ class _$AnalyticsEventAnalyticsEventDetailImpl
             (identical(other.item, item) || other.item == item));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, screen, item);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AnalyticsEventAnalyticsEventDetail
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AnalyticsEventAnalyticsEventDetailImplCopyWith<
@@ -374,8 +399,11 @@ abstract class _AnalyticsEventAnalyticsEventDetail
   String? get screen;
   @override
   String? get item;
+
+  /// Create a copy of AnalyticsEventAnalyticsEventDetail
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AnalyticsEventAnalyticsEventDetailImplCopyWith<
           _$AnalyticsEventAnalyticsEventDetailImpl>
       get copyWith => throw _privateConstructorUsedError;

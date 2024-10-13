@@ -84,6 +84,9 @@ class _$AppExceptionCopyWithImpl<$Res, $Val extends AppException>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of AppException
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -102,6 +105,9 @@ class __$$AppExceptionConnectivityImplCopyWithImpl<$Res>
       _$AppExceptionConnectivityImpl _value,
       $Res Function(_$AppExceptionConnectivityImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of AppException
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -219,6 +225,9 @@ class __$$AppExceptionUnauthorizedImplCopyWithImpl<$Res>
       _$AppExceptionUnauthorizedImpl _value,
       $Res Function(_$AppExceptionUnauthorizedImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of AppException
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -339,6 +348,8 @@ class __$$AppExceptionErrorMessageImplCopyWithImpl<$Res>
       $Res Function(_$AppExceptionErrorMessageImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AppException
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -377,7 +388,9 @@ class _$AppExceptionErrorMessageImpl implements _AppExceptionErrorMessage {
   @override
   int get hashCode => Object.hash(runtimeType, message);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AppException
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AppExceptionErrorMessageImplCopyWith<_$AppExceptionErrorMessageImpl>
@@ -464,7 +477,10 @@ abstract class _AppExceptionErrorMessage implements AppException {
       _$AppExceptionErrorMessageImpl;
 
   String get message;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AppException
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AppExceptionErrorMessageImplCopyWith<_$AppExceptionErrorMessageImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -483,6 +499,9 @@ class __$$AppExceptionErrorImplCopyWithImpl<$Res>
   __$$AppExceptionErrorImplCopyWithImpl(_$AppExceptionErrorImpl _value,
       $Res Function(_$AppExceptionErrorImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of AppException
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc

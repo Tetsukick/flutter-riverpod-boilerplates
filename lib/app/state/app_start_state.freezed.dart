@@ -91,6 +91,9 @@ class _$AppStartStateCopyWithImpl<$Res, $Val extends AppStartState>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of AppStartState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -107,6 +110,9 @@ class __$$InitialImplCopyWithImpl<$Res>
   __$$InitialImplCopyWithImpl(
       _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of AppStartState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -228,6 +234,9 @@ class __$$UnauthenticatedImplCopyWithImpl<$Res>
   __$$UnauthenticatedImplCopyWithImpl(
       _$UnauthenticatedImpl _value, $Res Function(_$UnauthenticatedImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of AppStartState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -349,6 +358,9 @@ class __$$InternetUnAvailableImplCopyWithImpl<$Res>
   __$$InternetUnAvailableImplCopyWithImpl(_$InternetUnAvailableImpl _value,
       $Res Function(_$InternetUnAvailableImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of AppStartState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -471,6 +483,9 @@ class __$$AppAuthenticatedImplCopyWithImpl<$Res>
   __$$AppAuthenticatedImplCopyWithImpl(_$AppAuthenticatedImpl _value,
       $Res Function(_$AppAuthenticatedImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of AppStartState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -594,6 +609,9 @@ class __$$AppAuthenticatedAnonymousImplCopyWithImpl<$Res>
       _$AppAuthenticatedAnonymousImpl _value,
       $Res Function(_$AppAuthenticatedAnonymousImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of AppStartState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc

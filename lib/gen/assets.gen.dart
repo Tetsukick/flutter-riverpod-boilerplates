@@ -13,16 +13,16 @@ class $AssetsEnvGen {
   const $AssetsEnvGen();
 
   /// File path: assets/env/.env.development
-  String get envDevelopment => 'assets/env/.env.development';
+  String get aEnvDevelopment => 'assets/env/.env.development';
 
   /// File path: assets/env/.env.production
-  String get envProduction => 'assets/env/.env.production';
+  String get aEnvProduction => 'assets/env/.env.production';
 
   /// File path: assets/env/.env.staging
-  String get envStaging => 'assets/env/.env.staging';
+  String get aEnvStaging => 'assets/env/.env.staging';
 
   /// List of all assets
-  List<String> get values => [envDevelopment, envProduction, envStaging];
+  List<String> get values => [aEnvDevelopment, aEnvProduction, aEnvStaging];
 }
 
 class $AssetsLangGen {
@@ -47,9 +47,16 @@ class Assets {
 }
 
 class AssetGenImage {
-  const AssetGenImage(this._assetName);
+  const AssetGenImage(
+    this._assetName, {
+    this.size,
+    this.flavors = const {},
+  });
 
   final String _assetName;
+
+  final Size? size;
+  final Set<String> flavors;
 
   Image image({
     Key? key,
@@ -69,7 +76,7 @@ class AssetGenImage {
     ImageRepeat repeat = ImageRepeat.noRepeat,
     Rect? centerSlice,
     bool matchTextDirection = false,
-    bool gaplessPlayback = false,
+    bool gaplessPlayback = true,
     bool isAntiAlias = false,
     String? package,
     FilterQuality filterQuality = FilterQuality.low,
