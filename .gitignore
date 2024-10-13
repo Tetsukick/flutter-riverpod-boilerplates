@@ -131,3 +131,5 @@ lib/generated/intl/messages_all.dart
 
 *.aab
 .idea/dictionaries/sadmansamee.xml
+google-services.json
+GoogleService-Info.plist
