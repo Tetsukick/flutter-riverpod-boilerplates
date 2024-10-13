@@ -44,7 +44,7 @@ class DioConnectivityRequestRetrier {
                   maxRedirects: requestOptions.maxRedirects,
                   requestEncoder: requestOptions.requestEncoder,
                   responseDecoder: requestOptions.responseDecoder,
-                  listFormat: requestOptions.listFormat),
+                  listFormat: requestOptions.listFormat,),
             ),
           );
         }

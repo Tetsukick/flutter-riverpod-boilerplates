@@ -110,7 +110,7 @@ class EmailValidator {
   }
 
   static bool _skipDomain(
-      String text, bool allowTopLevelDomains, bool allowInternational) {
+      String text, bool allowTopLevelDomains, bool allowInternational,) {
     if (!_skipSubDomain(text, allowInternational)) {
       return false;
     }
@@ -297,7 +297,7 @@ class EmailValidator {
   ///
   /// Throws an [ArgumentError] if the email is null.
   static bool validate(String? email,
-      [bool allowTopLevelDomains = false, bool allowInternational = true]) {
+      [bool allowTopLevelDomains = false, bool allowInternational = true,]) {
     _index = 0;
 
     if (email == null) {

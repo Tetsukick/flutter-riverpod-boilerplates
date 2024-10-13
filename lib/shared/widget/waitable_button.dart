@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class WaitableElevatedButton extends StatefulWidget {
 
-  WaitableElevatedButton({
+  const WaitableElevatedButton({
     required this.onPressed,
     required this.child,
     this.style,
@@ -38,7 +38,7 @@ class _WaitableElevatedButtonState extends State<WaitableElevatedButton> {
 
 class WaitableOutlinedButton extends StatefulWidget {
 
-  WaitableOutlinedButton({
+  const WaitableOutlinedButton({
     required this.onPressed,
     required this.child,
     this.style,

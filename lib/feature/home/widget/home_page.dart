@@ -1,10 +1,10 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_boilerplate/feature/home/provider/books_provider.dart';
 import 'package:flutter_boilerplate/feature/home/widget/row_book_widget.dart';
 import 'package:flutter_boilerplate/shared/http/app_exception.dart';
 import 'package:flutter_boilerplate/shared/route/app_router.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class HomePage extends ConsumerWidget {
   const HomePage({super.key});
@@ -14,7 +14,7 @@ class HomePage extends ConsumerWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blueGrey,
-        title: Text("home".tr()),
+        title: Text('home'.tr()),
         actions: <Widget>[
           IconButton(
             icon: const Icon(Icons.adjust),
@@ -47,7 +47,7 @@ class HomePage extends ConsumerWidget {
             itemCount: books.length,
             itemBuilder: (BuildContext context, int index) {
               return RowBookWidget(book: books[index]);
-            });
+            },);
       },
       error: (AppException error) {
         return _widgetLoading(context, ref);

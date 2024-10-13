@@ -8,4 +8,20 @@
     <color name="error">#D80000</color>
     <color name="inProgressYellow">#CC9233</color>
 
+    <color name="red">#C9022F</color>
+    <color name="fontBlack">#000000</color>
+    <color name="fontGray900">#333333</color>
+
+    <color name="bgWhite">#FFFFFF</color>
+    <color name="bgGray200">#EBEBEB</color>
+
+    <color name="gray900">#333333</color>
+    <color name="gray700">#686868</color>
+    <color name="gray600">#828282</color>
+    <color name="gray500">#9C9C9C</color>
+    <color name="gray400">#B6B6B6</color>
+    <color name="gray300">#D1D1D1</color>
+    <color name="gray200">#EBEBEB</color>
+    <color name="gray100">#F7F7F7</color>
+
 </resources>

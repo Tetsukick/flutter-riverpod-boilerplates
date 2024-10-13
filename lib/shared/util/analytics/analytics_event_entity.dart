@@ -1,6 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import 'analytics_parameters.dart';
+import 'package:flutter_boilerplate/shared/util/analytics/analytics_parameters.dart';
 
 part 'analytics_event_entity.freezed.dart';
 part 'analytics_event_entity.g.dart';

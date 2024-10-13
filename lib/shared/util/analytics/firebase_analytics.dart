@@ -5,8 +5,8 @@ import 'package:app_tracking_transparency/app_tracking_transparency.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/foundation.dart';
 
-import 'analytics_event_entity.dart';
-import 'analytics_parameters.dart';
+import 'package:flutter_boilerplate/shared/util/analytics/analytics_event_entity.dart';
+import 'package:flutter_boilerplate/shared/util/analytics/analytics_parameters.dart';
 
 class FirebaseAnalyticsUtils {
   static final analytics = FirebaseAnalytics.instance;

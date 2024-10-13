@@ -66,7 +66,7 @@ class ApiProvider {
         ContentType contentType = ContentType.json,
         bool needRetry = true,
       }) async {
-    final connectivityResult = await (Connectivity().checkConnectivity());
+    final connectivityResult = await Connectivity().checkConnectivity();
     if (connectivityResult == ConnectivityResult.none) {
       return const APIResponse.error(AppException.connectivity());
     }
@@ -74,7 +74,7 @@ class ApiProvider {
     if (newBaseUrl != null) {
       url = newBaseUrl + path;
     } else {
-      url = this._baseUrl + path;
+      url = _baseUrl + path;
     }
     var content = 'application/x-www-form-urlencoded';
 
@@ -93,7 +93,7 @@ class ApiProvider {
       } else {}
       //Sometime for some specific endpoint it may require to use different Token
       if (token != null) {
-        headers['Authorization'] = 'Bearer ${token}';
+        headers['Authorization'] = 'Bearer $token';
       }
 
       debugPrint('headers for $path: $headers');
@@ -153,13 +153,13 @@ class ApiProvider {
           }
         }
       }
-    } on DioError catch (e) {
+    } on DioException catch (e) {
       if (e.error is SocketException) {
         return const APIResponse.error(AppException.connectivity());
       }
-      if (e.type == DioErrorType.connectionTimeout ||
-          e.type == DioErrorType.receiveTimeout ||
-          e.type == DioErrorType.sendTimeout) {
+      if (e.type == DioExceptionType.connectionTimeout ||
+          e.type == DioExceptionType.receiveTimeout ||
+          e.type == DioExceptionType.sendTimeout) {
         return const APIResponse.error(AppException.connectivity());
       }
 
@@ -188,7 +188,7 @@ class ApiProvider {
         ContentType contentType = ContentType.json,
         bool needRetry = true,
       }) async {
-    final connectivityResult = await (Connectivity().checkConnectivity());
+    final connectivityResult = await Connectivity().checkConnectivity();
     if (connectivityResult == ConnectivityResult.none) {
       return const APIResponse.error(AppException.connectivity());
     }
@@ -196,7 +196,7 @@ class ApiProvider {
     if (newBaseUrl != null) {
       url = newBaseUrl + path;
     } else {
-      url = this._baseUrl + path;
+      url = _baseUrl + path;
     }
 
     var content = 'application/x-www-form-urlencoded';
@@ -265,13 +265,13 @@ class ApiProvider {
           }
         }
       }
-    } on DioError catch (e) {
+    } on DioException catch (e) {
       if (e.error is SocketException) {
         return const APIResponse.error(AppException.connectivity());
       }
-      if (e.type == DioErrorType.connectionTimeout ||
-          e.type == DioErrorType.receiveTimeout ||
-          e.type == DioErrorType.sendTimeout) {
+      if (e.type == DioExceptionType.connectionTimeout ||
+          e.type == DioExceptionType.receiveTimeout ||
+          e.type == DioExceptionType.sendTimeout) {
         return const APIResponse.error(AppException.connectivity());
       }
       return const APIResponse.error(AppException.error());
@@ -287,7 +287,7 @@ class ApiProvider {
         ContentType contentType = ContentType.json,
         bool needRetry = true,
       }) async {
-    final connectivityResult = await (Connectivity().checkConnectivity());
+    final connectivityResult = await Connectivity().checkConnectivity();
     if (connectivityResult == ConnectivityResult.none) {
       return const APIResponse.error(AppException.connectivity());
     }
@@ -295,7 +295,7 @@ class ApiProvider {
     if (newBaseUrl != null) {
       url = newBaseUrl + path;
     } else {
-      url = this._baseUrl + path;
+      url = _baseUrl + path;
     }
     var content = 'application/x-www-form-urlencoded';
 
@@ -372,13 +372,13 @@ class ApiProvider {
           }
         }
       }
-    } on DioError catch (e) {
+    } on DioException catch (e) {
       if (e.error is SocketException) {
         return const APIResponse.error(AppException.connectivity());
       }
-      if (e.type == DioErrorType.connectionTimeout ||
-          e.type == DioErrorType.receiveTimeout ||
-          e.type == DioErrorType.sendTimeout) {
+      if (e.type == DioExceptionType.connectionTimeout ||
+          e.type == DioExceptionType.receiveTimeout ||
+          e.type == DioExceptionType.sendTimeout) {
         return const APIResponse.error(AppException.connectivity());
       }
 

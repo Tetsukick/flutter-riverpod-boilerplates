@@ -1,8 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_boilerplate/feature/auth/provider/auth_provider.dart';
-import 'package:flutter_boilerplate/feature/auth/state/auth_state.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 class SignUpPage extends ConsumerWidget {
@@ -19,30 +18,30 @@ class SignUpPage extends ConsumerWidget {
             child: Column(children: <Widget>[
               const SizedBox(height: 150),
               Text(
-                "sign_up".tr(),
+                'sign_up'.tr(),
                 style: TextStyle(
                     color: Colors.grey[800],
                     fontWeight: FontWeight.bold,
-                    fontSize: 40),
+                    fontSize: 40,),
               ),
               Form(
                 child: Column(
                   children: [
                     TextFormField(
                       decoration: InputDecoration(
-                        labelText: "name".tr(),
+                        labelText: 'name'.tr(),
                       ),
                       controller: _nameController,
                     ),
                     TextFormField(
                       decoration: InputDecoration(
-                        labelText: "email".tr(),
+                        labelText: 'email'.tr(),
                       ),
                       controller: _emailController,
                     ),
                     TextFormField(
                       decoration: InputDecoration(
-                        labelText: "password".tr(),
+                        labelText: 'password'.tr(),
                       ),
                       controller: _passwordController,
                       obscureText: true,
@@ -54,11 +53,11 @@ class SignUpPage extends ConsumerWidget {
                           _widgetSignUpButton(context, ref),
                           const SizedBox(height: 30),
                           _widgetSignInButton(context, ref),
-                        ]),
+                        ],),
                   ],
                 ),
-              )
-            ])));
+              ),
+            ],),),);
   }
 
   Widget _widgetSignInButton(BuildContext context, WidgetRef ref) {
@@ -68,8 +67,8 @@ class SignUpPage extends ConsumerWidget {
           onPressed: () {
             context.pop();
           },
-          child: Text("sign_in".tr()),
-        ));
+          child: Text('sign_in'.tr()),
+        ),);
   }
 
   Widget _widgetSignUpButton(BuildContext context, WidgetRef ref) {
@@ -78,9 +77,9 @@ class SignUpPage extends ConsumerWidget {
         child: ElevatedButton(
           onPressed: () {
             ref.read(authNotifierProvider.notifier).signUp(_nameController.text,
-                _emailController.text, _passwordController.text);
+                _emailController.text, _passwordController.text,);
           },
-          child: Text("sign_up".tr()),
-        ));
+          child: Text('sign_up'.tr()),
+        ),);
   }
 }

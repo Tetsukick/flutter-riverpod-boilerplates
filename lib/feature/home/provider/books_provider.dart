@@ -34,10 +34,10 @@ class BooksNotifier extends _$BooksNotifier {
                 authenticated: () {
                   _fetchBooks();
                 },
-                orElse: () {});
+                orElse: () {},);
           },
           error: (e, st) {},
-          loading: () {});
+          loading: () {},);
     });
 
     return const BooksState.loading();

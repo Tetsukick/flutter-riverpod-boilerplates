@@ -105,7 +105,7 @@ extension WidgetAnimationExtension on Widget {
     return animate(
       onPlay: (controller) => controller.repeat(),
     ).shimmer(
-      duration: 1500.ms
+      duration: 1500.ms,
     );
   }
 }
