@@ -44,7 +44,9 @@ class FirebaseAnalyticsUtils {
       try {
         FirebaseAnalyticsUtils.analytics.logEvent(
           name: entity.name ?? '',
-          parameters: entity.analyticsEventDetail?.toJson(),
+          parameters: entity.analyticsEventDetail
+              ?.toJson()
+              .map((key, value) => MapEntry(key, value as Object)),
         );
       } catch (e) {
         log('Analytic Error: $e' );
